@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ExpenseListItem = ({ id, description, amount, createdAt }) => (
-    <tr>
-        <td><Link to={`/edit/${id}`}>{description}</Link></td>
-        <td>{amount}</td>
-        <td>{createdAt}</td>
-    </tr>
+    <div>
+        <h3><Link to={`/edit/${id}`}>{description}</Link></h3>
+        <p>{amount} - {createdAt}</p>
+    </div>
 );
 
 export default ExpenseListItem;
