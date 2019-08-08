@@ -5,17 +5,14 @@ import selectExpenses from '../selectors/expenses';
 import expensesTotal from '../selectors/expenses-total';
 
 
-export class ExpensesSummary extends React.Component{
-    constructor(props){
-        super(props);
-    };
-    render = () => (
+export const ExpensesSummary = ({ expensesCount, expensesTotal }) =>{
+    return (
         <div>
-            <h3>
-                Viewing {this.props.expensesCount} 
-                {this.props.expensesCount === 1 ? ' expense ' : ' expenses '}
-                totalling {numeral(this.props.expensesTotal / 100).format('$0,0.00')}
-            </h3>
+            <h1>
+                Viewing {expensesCount} 
+                {expensesCount === 1 ? ' expense ' : ' expenses '}
+                totalling {numeral(expensesTotal / 100).format('$0,0.00')}
+            </h1>
         </div>
     );
 };
