@@ -36,5 +36,5 @@ test('should handle startRemoveExpense', () => {
         .find('button')
         .simulate('click');
     expect(history.push).toHaveBeenLastCalledWith('/');
-    expect(startRemoveExpense).toHaveBeenLastCalledWith(expenses[1].id);
+    expect(startRemoveExpense).toHaveBeenLastCalledWith({ id: expenses[1].id });
 });
