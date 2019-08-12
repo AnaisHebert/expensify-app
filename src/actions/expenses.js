@@ -1,5 +1,5 @@
 import database from '../firebase/firebase';
-import { auth } from 'firebase';
+// import { auth } from 'firebase';
 
 // components calls action generator
 // action generator returns function
